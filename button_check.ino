@@ -1,6 +1,4 @@
 #include <IRremote.h>
-#define Button_1 511DBB
-#define Button_2 A3C8EDDB
 int reciver = 7;  // pin for the IR sensor
 IRrecv irrecv(reciver);
 decode_results results;
@@ -10,8 +8,6 @@ decode_results results;
 void setup(){
 Serial.begin(9600);
 irrecv.enableIRIn();
-pinMode (8, OUTPUT);
-pinMode (9, OUTPUT);
 }
 
 
@@ -22,3 +18,4 @@ void loop(){
    irrecv.resume(); //next value 
   }
 }
+
